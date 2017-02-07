@@ -1,2 +1,0 @@
-# gitRepo
-My GIT Repo
