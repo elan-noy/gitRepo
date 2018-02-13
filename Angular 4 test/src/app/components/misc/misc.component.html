@@ -1,0 +1,88 @@
+<div class="container">
+    <div class="row top">
+        <h1>This page has multiple Angular 4 demonstrations</h1>
+        <h2>Adding, hiding and removing items</h2>
+        <button (click)="togglleHobbies()">{{showHobbies ? "Hide" : "Show"}} Hobbies</button>
+        <div *ngIf="showHobbies">
+            <h2>Hobbies</h2>
+            <ul class="hobbies">
+                <li *ngFor="let hobby of hobbies ; let i = index">
+                    {{hobby}}
+                    <button (click)="deleteHobby(i)">Delete</button>
+                </li>
+            </ul>
+            <form (submit)="addHobby(hobby.value)">
+                <div class="form-group">
+                    <label>Add Hobbiy</label>
+                    <input type="text" name="hobby" #hobby class="form-control" />
+                </div>
+            </form>
+        </div>
+    </div>
+    <hr/>
+    <div class="row">
+        <h2>Edit User (two way binding demonstration)</h2>
+        <h1>HI {{name}}</h1>
+        <p>{{name}}</p>
+        <p>{{address.street}}</p>
+        <p>{{address.town}}</p>
+        <form>
+            <div class="form-group">
+                <label for="" name>Name</label>
+                <input type="text" id="name" name="name" [(ngModel)]="name" class="form-control" />
+            </div>
+            <div class="form-group">
+                <label>Email</label>
+                <input type="email" name="email" [(ngModel)]="email" class="form-control" />
+            </div>
+            <div class="form-group">
+                <label>Town</label>
+                <input type="text" name="town" [(ngModel)]="address.town" class="form-control" />
+            </div>
+            <div class="form-group">
+                <label>Street</label>
+                <input type="text" name="street" [(ngModel)]="address.street" class="form-control" />
+            </div>
+        </form>
+    </div>
+</div>
+<div class="container ">
+    <div class="row">
+        <h2>REST demonstration.</h2>
+        <h3>Get Posts and get Posts1 demo getting data from two sites</h3>
+        <h3>Post, posts a new record</h3>   
+        <button (click)="deletePost()">Delete Post</button>
+        <button (click)="getPosts()">Get Post</button>
+        <button (click)="postPost()">Post Post</button>
+        <button (click)="getPost1()">Get Post1</button>
+        <h2>Posts</h2>
+        <button (click)="moreorLess()">{{moreOrLess}}</button>
+        <div *ngFor="let post of posts ; let i = index" class="post">
+            <div *ngIf="i < number_of_posts">
+                <h3>
+                    {{post.title}}
+                </h3>
+                <p>
+                    {{post.body}}
+                </p>
+            </div>
+        </div>
+        <div *ngFor="let post of data ; let i = index" class="post">
+            <div *ngIf="i < number_of_posts" class="row">
+                <div class="col-sm-4">
+                    <p>
+                        <span>
+                            {{post.first_name}}
+                        </span>
+                        <span>
+                            {{post.last_name}}
+                        </span>
+                    </p>
+                </div>
+                <div class="col-sm-8">
+                    <img src="{{post.avatar}}" />
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
