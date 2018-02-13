@@ -13,6 +13,7 @@ import { HeaderComponent } from './components/header/header.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { AnimationComponent } from './components/animation/animation.component';
 import { AboutComponent } from './components/about/about.component';
+import { PagenotfoundComponent } from './components/pagenotfound/pagenotfound.component';
 
 
 @NgModule({
@@ -23,7 +24,8 @@ import { AboutComponent } from './components/about/about.component';
     HeaderComponent,
     FooterComponent,
     AnimationComponent,
-    AboutComponent
+    AboutComponent,
+    PagenotfoundComponent
   ],
   imports: [
     BrowserModule, routing, FormsModule, HttpClientModule, BrowserAnimationsModule

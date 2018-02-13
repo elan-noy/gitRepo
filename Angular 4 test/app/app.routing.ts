@@ -4,6 +4,7 @@ import { MiscComponent } from './components/misc/misc.component';
 import { AboutComponent } from './components/about/about.component';
 import { AnimationComponent } from './components/animation/animation.component';
 import { HomeComponent } from './components/home/home.component';
+import { PagenotfoundComponent } from './components/pagenotfound/pagenotfound.component';
 
 
 const appRoutes: Routes = [
@@ -22,6 +23,10 @@ const appRoutes: Routes = [
     {
         path: 'animation',
         component: AnimationComponent
+    },
+    {
+        path: '**',
+        component: PagenotfoundComponent
     }
 ]
 
