@@ -1,0 +1,87 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+		<title>Schechter Yom Haazmaut</title>
+		<script type="text/javascript" src="js/jquery-1.3.2.js"></script>
+		<script type="text/javascript">
+			$(document).ready(function() {
+				var images = ["images/cherry.jpg", "images/netafim.jpg", "images/thumb_drive.jpg", "images/waze_logo.jpg", 'images/waze_map.jpg'];
+				var image = images[Math.floor(Math.random() * 5)];
+				$(".game").empty();
+				$(".directions img").remove();
+				$(".directions").append('<img src=' + image + ' alt="Schechter Puzzle" />');
+				$(".game").append('<img src=' + image + ' alt="Schechter Puzzle" class="jqPuzzle" />');
+			});
+		</script>
+		<script type="text/javascript" src="js/myVersionOfJQPuzzle.js"></script>
+		<link rel="stylesheet" type="text/css" href="css/jquery.jqpuzzle.css" />
+		<style>
+			body {
+				font-family: Verdana, Arial, Helvetica, sans-serif;
+			}
+			.wrapper {
+				border: 4px solid blue;
+				width: 1100px;
+				height: 650px;
+				margin: 0 auto;
+			}
+			.directions {
+				width: 350px;
+				padding-top: 20px;
+				float: left;
+				color: blue;
+				margin-left: 20px;
+			}
+			.directions img {
+				width: 330px;
+			}
+			.direction_text {
+				float: left;
+				margin-bottom: 20px;
+				padding-left: 10px;
+				width: 320px;
+			}
+			.game {
+				float: right;
+				margin: 0px auto;
+				margin-top: 20px;
+			}
+			.abc {
+				width: 400px;
+				margin: 0 auto;
+				font-size: 26px;
+				color: #0000A0;
+			}
+			.jqPuzzle .jqp-piece {
+				color: yellow;
+				font-size: 36px;
+				text-align: center;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="wrapper">
+
+			<div class="directions">
+				<div class="direction_text">
+					<h3>Instructions</h3>
+					<p>
+						1. Click the Shuffle button
+					</p>
+					<p>
+						2. Your goal is to rearrange the picture
+					</p>
+					<p>
+						3. Press F5 to get a new game
+					</p>
+				</div>
+				<h3>This is how it should look like </h3>
+				<img src="images/jerusalem.jpg" alt="Schechter Puzzle"/>
+			</div>
+			<div class= "game">
+				<img src="images/jerusalem.jpg" alt="Schechter Puzzle" class="jqPuzzle" />
+			</div>
+		</div>
+	</body>
+</html>
