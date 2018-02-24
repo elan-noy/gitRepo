@@ -1,6 +1,6 @@
 <div class="container">
   <div class="row image">
-    <h1>Multiple animation demos</h1>
+    <h1>Multiple UI and animation demos</h1>
     <h2>Hide and show
     </h2>
     <div [@popOverState]="stateName">
@@ -37,7 +37,7 @@
       <div class="panel panel-default">
         <div class="panel-heading" data-toggle="collapse" data-parent="#accordion" href="#collapse1">
           <h4 class="panel-title">
-              Collapsible Group 1
+            Collapsible Group 1
           </h4>
         </div>
         <div id="collapse1" class="panel-collapse collapse in">
@@ -50,7 +50,7 @@
       <div class="panel panel-default">
         <div class="panel-heading" data-toggle="collapse" data-parent="#accordion" href="#collapse2">
           <h4 class="panel-title">
-              Collapsible Group 2
+            Collapsible Group 2
           </h4>
         </div>
         <div id="collapse2" class="panel-collapse collapse">
@@ -72,6 +72,28 @@
             consequat.
           </div>
         </div>
+      </div>
+    </div>
+  </div>
+  <div>
+    <div class="row">
+      <h2>Date Picker</h2>
+      <div class="col-md-6">
+        <kendo-datepicker (blur)="onBlur()" (focus)="onFocus()" (open)="onOpen()" (close)="onClose()" (valueChange)="onChange($event)"
+          [value]="value">
+        </kendo-datepicker>
+      </div>
+      <div class="datepicker">
+        <p>Select a date:</p>
+        <kendo-datepicker [(value)]="value"></kendo-datepicker>
+      </div>`
+    </div>
+
+    <h2>Calendar</h2>
+    <div class="container-fluid">
+      <div class="row">
+        <kendo-calendar [value]="value" [focusedDate]="focusedDate"> </kendo-calendar>
+
       </div>
     </div>
   </div>
